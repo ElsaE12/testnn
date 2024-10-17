@@ -15,7 +15,7 @@ body {
     grid-column: span 12;
     text-align: center;
     margin-bottom: 50px;
-    background-color: #fff; /* White background for the header */
+    background-color: white; /* White background for the header */
     padding: 20px;
 }
 
@@ -52,7 +52,7 @@ a:hover {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
-    background-color: #fff; /* White background for main sections */
+    background-color: white; /* White background for main sections */
 }
 
 /* First Section */
