@@ -1,41 +1,22 @@
 /* General Styles */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #ad1a1a;
-    margin: 0;
-    padding: 0;
+* {
     box-sizing: border-box;
 }
 
-h1, h2 {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f5; /* Light background */
+    margin: 0;
+    padding: 0;
 }
 
-a {
-    color: #007BFF;
-    text-decoration: none;
-    transition-property: color;
-    transition-duration: 0.3s;
-}
-
-a:hover {
-    color: #0056b3;
-}
-
-.container {
-    max-width: 100%;
-    padding: 0 20px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 20px;
-}
-
+/* Styling for the header section */
 .header {
     grid-column: span 12;
     text-align: center;
     margin-bottom: 50px;
+    background-color: #fff; /* White background for the header */
+    padding: 20px;
 }
 
 .header h1 {
@@ -43,25 +24,52 @@ a:hover {
     margin-bottom: 10px;
     text-transform: uppercase;
     line-height: 1.2;
+    color: #333; /* Darker text color for the title */
 }
 
 .description {
     font-size: 1.1em;
-    color: #555;
+    color: #555; /* Lighter text color for descriptions */
     max-width: 600px;
     margin: 0 auto 20px;
 }
 
+a {
+    color: #007BFF; /* Instagram link color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #0056b3; /* Darker shade of blue on hover */
+}
+
+/* Main container grid */
+.container {
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+    background-color: #fff; /* White background for main sections */
+}
+
+/* First Section */
 .first-section {
     grid-column: span 12;
+    margin-bottom: 50px;
+    text-align: left;
 }
 
 .first-section h2 {
     font-size: 2em;
     margin-bottom: 10px;
     text-transform: capitalize;
+    color: #333; /* Darker title text */
 }
 
+/* Flexbox Image Grid */
 .image-grid {
     display: flex;
     justify-content: space-between;
@@ -73,45 +81,55 @@ a:hover {
     position: relative;
 }
 
+/* Image Styles */
 .image-item img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border: 3px solid #007BFF;
+    border: 5px solid #007BFF; /* Blue border for images */
     transition: transform 0.3s, border-radius 0.3s;
 }
 
+/* Hover Effects on Images */
 .image-item img:hover {
-    transform: scale(1.05);
-    border-radius: 10px;
+    transform: scale(1.05); /* Slight enlargement */
+    border-radius: 10px; /* Rounded corners on hover */
 }
 
+/* Center the last image and give it a border */
 .centered {
     text-align: center;
 }
 
 .centered img {
-    border: 5px solid #333;
+    border: 5px solid #333; /* Thick black border for the centered image */
 }
 
+/* Final Section */
 .final-section {
     grid-column: span 12;
     text-align: center;
     margin-top: 30px;
 }
 
+.final-section h2 {
+    font-size: 2em;
+    color: #333; /* Darker title text */
+}
+
+/* Footer Styles */
 .footer {
     grid-column: span 12;
-    background-color: #000;
-    color: white;
+    background-color: #000; /* Black background for footer */
+    color: white; /* White text for contrast */
     padding: 20px;
     text-align: center;
 }
 
-/* Responsive Breakpoint */
+/* Responsive Breakpoint for 768px */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2em;
+        font-size: 2em; /* Reduce font size for smaller screens */
     }
 
     h2 {
@@ -119,10 +137,10 @@ a:hover {
     }
 
     .image-grid {
-        flex-direction: column;
+        flex-direction: column; /* Stack images vertically on smaller screens */
     }
 
     .image-item img {
-        height: auto;
+        height: auto; /* Remove fixed height for responsiveness */
     }
 }
